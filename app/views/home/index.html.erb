@@ -1,1 +1,13 @@
-<p>Hello World!</p>
+<div class="container">
+  <h1>City: <%= @data["name"]%></h1>
+  <div><%=@data["sys"]["country"]%></div>
+  <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
+  <div class="description">
+    <%= @data["weather"].first["main"]%>
+    <%= @data["weather"].first["description"]%>
+    
+  </div>
+  <div>Humidity: <%= @data["main"]["humidity"]%> %</div>
+  <div>Temp: <%= @data["main"]["temp"]%> Celsius</div>
+  <div>Feels like: <%= @data["main"]["feels_like"]%> Celsius</div>
+</div>
